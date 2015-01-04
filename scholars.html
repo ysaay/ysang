@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            text-align: center;
+        }
+        .app-title {
+            padding: 8px 0px 8px 0px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+            position:fixed;
+            bottom:0px;
+            width:100%;
+            text-align: center;
+            background: #333;
+            height:15px;
+        }
+        div.list {
+            margin-top: 65px;
+        }
+        
+        div.list > ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        
+        div.list > ul > li {
+            font-family: 'Open Sans';
+            font-weight: 100;
+            font-size: 16px;
+            /*text-align: center;*/
+            border-bottom: 1px solid rgba(165, 145, 0, 0.61);
+            padding: 15px 0px 15px 20px;
+        }
+        
+        div.list > ul > li > a {
+            display: block;
+            text-decoration: none;
+            color: #3F3F3F;
+        }
+        div.list > ul > li > a > i {
+            margin-right: 10px;
+        }
+        .back {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        
+         .forward {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+        
+        .menu {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .white {
+        	color:#FFF;
+        }
+    </style>
+</head>
+<body class="animated fadeIn">
+  <div class="header">
+        <div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+    
+    <div class="list">
+
+        <ul>
+		<li style="font-size:30px;font-family:'Impact';"><a href="scholars-grantee.html" ><i class="fa fa-pencil-square-o white"></i> Grantee</a></li>
+		
+            <li style="font-size:30px;font-family:'Impact';"><a href="scholars-academic.html"><i class="fa fa-book white"></i> Academic</a></li>
+			
+            <li style="font-size:30px;font-family:'Impact';"><a href="scholars-marching-band.html"><i class="fa fa-music white"></i> Marching Band</a></li>
+            
+			<li style="font-size:30px;font-family:'Impact';"><a href="scholars-varsity.html"><i class="fa fa-trophy white"></i> Varsity</a></li>
+           
+			<li style="font-size:30px;font-family:'Impact';"><a href="scholars-culture-arts.html"><i class="fa fa-users white"></i> Culture and Arts</a></li>
+        </ul>
+    </div>
+    
+    
+    <!-- <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <a class="forward" href="menu.html"><i class="fa fa-arrow-left"></i></a>
+    <div class="app-title"></div>
+     -->
+    <a class="btn btn-primary" href="menu.html" style="padding:4px 18px; z-index:99999; position:fixed;bottom:0px; background:#1fae66;color:#FFF;font-family:'Open Sans';text-decoration:none;left:0px;">BACK</a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-91);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-91);
+        });
+    });    
+    </script>
+</body>
+</html>

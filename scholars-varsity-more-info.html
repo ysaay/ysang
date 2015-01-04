@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+		.btn{
+			
+		}
+    </style>
+</head>
+<body class="animated fadeIn">
+    <div class="header">
+        <div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+    <br/>
+    <br/>
+         <br/>
+    <br/>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+	<h2><center><font size="5%">Implementing Guidelines for the GORDON COLLEGE SCHOLARSHIP PROGRAM
+<br/>(Excerpts from Sangguniang Panlungsod Resolution No. 111 Series of 2012)
+</font>
+</center></h2>
+			<p style="align: justify "><font size="4%">
+				As a scholar, we would like to formalize the following Implementing Guidelines covering your scholarship grant as follows:<br /><br />
+				1.	The City Scholarship Program-Tertiary Level shall cover only four years (8 semesters) of financial assistance. 
+				<br />
+	2.	The scholarship grant shall consist of (FULL / PARTIAL) Tuition Fee / Miscellaneous Fee Exemption depending on the type of Scholarship.
+	<br />
+3.	This scholarship grant is subject to per semester review of your academic performance / achievement.
+<br />
+4.	To be able to retain the scholarship grant, all the scholars must meet the following conditions every semester
+<br /><br />
+a.	Maintain a semestral grade:<br />
+iii.	Achievement Scholarship ( Culture & Arts, Varsity, Olongapo City Marching Band)
+<br />
+1.	Scholars must have a GPA of at least 75%, with no failing grade.
+<br />
+2.	Give significant contribution to the College / or the City.
+<br /><br />
+b.	Must enroll in at least 18 units unless otherwise specified by the curriculum and shall finish his / her course within the prescribed course duration.
+<br />
+5.	The scholarship grant shall automatically be forfeited in case of expulsion from the school or if the scholar discontinues his / her studies.
+<br />
+6.	A written reprimand issued by the Office of Student Welfare and Services and / or Scholar's Affairs Office for the minor offenses or a major offense shall mean termination of the scholarship program.
+<br />
+7.	Dropping out, deferment or non-enrolment for the next semester shall terminate the program and shall oblige the student to reimburse all amount spent on scholarship. However if a leave of absence is due to unavoidable circumstance like illness or accident, scholarship shall be continued upon return to school provided that the proper document shall be presented. 
+<br />
+8.	The scholar must abide with program-related requirements aside from those stipulated above such as but not limited to attendance in fellowship activities and other out-of-school activities that may be organized for scholars, reporting of grades, monitoring and evaluation of academic performance and voluntary service. 
+<br />
+
+</font>
+			</p>
+		</div>
+		
+		<div class="">
+			<a href="menu.html">
+				<button class="btn col-lg-12 col-md-12 col-sm-12 col-xs-12 btn-success"><i class="fa fa-bars"></i>  Menu</button>
+			</a>
+		</div>
+		
+    </div>
+
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <a class="back" href="scholars-varsity.html"><i class="fa fa-arrow-left"></i></a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+    });    
+    </script>
+</body>
+</html>

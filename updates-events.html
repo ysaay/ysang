@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>Available Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+        
+        div.list {
+            margin-top: 35px;
+        }
+        
+        div.list > ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        
+        div.list > ul > li {
+            font-family: 'Open Sans';
+            font-weight: 100;
+            font-size: 16px;
+            /*text-align: center;*/
+            border-bottom: 1px solid rgba(165, 145, 0, 0.61);
+            padding: 15px 0px 15px 20px;
+        }
+        
+        div.list > ul > li > a {
+            display: block;
+            text-decoration: none;
+            color: #3F3F3F;
+        }
+        div.list > ul > li > a > i {
+            margin-right: 10px;
+        }
+		.pull-right {
+			float:right !important;
+		}
+		
+        .back {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+            height:20px;
+            width:20px;
+        }
+        
+        .forward {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            right: 15px;
+            color: #C2C2C2;
+            height:20px;
+            width:20px;
+        }
+        
+        .menu {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+            height:20px;
+            width:20px;
+        }
+		.time {
+			padding-right: 15px;
+			font-size:12px;
+		}
+		.timeline-icon > div {
+            width:40px;
+            height:40px;
+        }
+        .timeline-icon > div > i{
+            line-height: 2.5;
+        }
+    </style>
+     <link rel="stylesheet" type="text/css" href="plugins/timeline/css/styles.css">
+</head>
+<body class="animated fadeIn">
+  <div class="header">
+        <div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+    
+	<div>
+        <div class="timeline animated" id="updates">
+
+        </div>
+    </div>
+    
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-91);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-91);
+        });
+        
+        $.ajax({
+        	async: false,
+        	url: api + 'events',
+        	dataType: 'json',
+        	success: function(data){
+        		$.each(data.announcements, function(i,v){
+		        	data = '<div class="timeline-row">' +
+		            '<div class="timeline-time">' +
+		                '<small>'+  v.Announcement.created  +'</small>' +
+		            '</div>' +
+		            '<div class="timeline-icon">' +
+		             '<div class="bg-primary">' +
+		                '<i class="fa fa-calendar"></i>' +
+		              '</div>' +
+		            '</div>' +
+		            '<div class="panel timeline-content">' +
+		              '<div class="panel-body">' +
+		                '<p>' + v.Announcement.content + '</p>' +
+		              '</div>' +
+		            '</div>' +
+		          '</div>';
+		          console.log(data);
+        			$('#updates').append(data);
+        		});
+        	}
+        });
+        
+    });    
+    </script>
+    <script src="plugins/timeline/js/main.js"></script>
+    
+    
+	<a href="updates.html" class="btn btn-primary" style="position:fixed;bottom:0px; left:0px; padding:4px 18px;background:#1fae66;color:#FFF;font-family:'Open Sans';text-decoration:none;">BACK</a>
+
+</body>
+</html>

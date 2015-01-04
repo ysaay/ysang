@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+		
+		div.list {
+			margin-top: 40px;
+		}
+		
+		div.form-container {
+			margin: 10px 10px;
+			padding: 5px 10px;
+			background: rgba(0,0,0,0.3);
+			font-family: 'Open Sans';
+			color: #E8E8E8;
+		}
+		
+    </style>
+</head>
+<body class="animated fadeIn">
+    <div class="header">
+		<div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+    <div class="list">
+    	
+    </div>
+    <script>
+    $(document).ready(function(){
+		localStorage.clear();
+		window.location = 'index.html';
+    });    
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            text-align: center;
+        }
+        .app-title {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+            position:fixed;
+            bottom:0px;
+            width:100%;
+            text-align: center;
+            background: #333;
+            height:31px;
+        }
+		div.list {
+			margin-top: 65px;
+		}
+		
+		div.form-container {
+			margin: 10px 10px;
+			padding: 5px 10px;
+			background: rgba(0,0,0,0.3);
+			font-family: 'Open Sans';
+			color: #E8E8E8;
+		}
+        .back {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        
+         .forward {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+        
+        .menu {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+    </style>
+</head>
+<body class="animated fadeIn">
+    <div class="header">
+		<div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+	<br/>
+    <form id="student-form">
+    <div class="list">
+    	<div class="form-container hide" id="form-error-container">
+	    	<div class="form-group">
+				<label id="form-error"></label>
+			</div>	
+    	</div>
+ 
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>STUDENT #</label>
+				<input name="data[User][username]" class="form-control" required>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>PASSWORD</label>
+				<input name="data[User][password]" class="form-control password" type="password" required>
+			</div>	
+    	</div>
+
+    	<div class="form-container">
+	    	<button class="btn btn-primary btn-block">LOGIN</button>
+    	</div>
+    </div>
+    <input type="reset" id="reset" class="hide">
+	</form>
+	
+    <!-- <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <a class="forward" href="menu.html"><i class="fa fa-arrow-left"></i></a>
+    <div class="app-title"></div> -->
+    <a class="btn btn-primary" href="menu.html" style="padding:4px 18px; z-index:99999; position:fixed;bottom:0px; background:#1fae66;color:#FFF;font-family:'Open Sans';text-decoration:none;left:0px;">BACK</a>
+    
+    <script src="plugins/bootstrap-3.2/js/bootstrap.min.js"></script>
+    <script>
+    function error($message){
+    	$('#form-error').html($message);
+    	$('#form-error-container').removeClass('hide');
+    }
+    $(document).ready(function(){
+
+	    $("#student-form").bind("submit", function (event){
+
+	        $.ajax({
+	            type:"POST", url: api + 'login',
+	            data: $('#student-form').serialize(), dataType: "json",
+	            success:function (data) {
+	            	if(data.response == 'success') {
+	            		localStorage.user_id = data.user_id;
+	            		localStorage.student_id = data.student_id;
+	            		localStorage.availableSched = JSON.stringify(data.availableSched);
+	            		localStorage.dutyInformation = JSON.stringify(data.dutyInformation);
+	            		localStorage.studentInformation = JSON.stringify(data.studentInformation);
+	            		localStorage.userInformation = JSON.stringify(data.userInformation);
+	            		localStorage.notification = JSON.stringify(data.notification);
+	            		$('#reset').click();
+	            		localStorage.login = 1;
+	            		window.location = 'menu-2.html';
+	            	} else {
+	            		error('Username or password is incorrect.');
+	            	}
+					console.log(data);
+	           },
+	        });
+  
+
+	        return false;
+	    });
+    });    
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="plugins/draggable_background.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            text-align: center;
+        }
+        .app-title {
+            padding: 8px 0px 8px 0px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+            position:fixed;
+            bottom:0px;
+            width:100%;
+            text-align: center;
+            background: #333;
+            height:15px;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        
+         .forward {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+        
+        .menu {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+
+    </style>
+</head>
+<body class="animated fadeIn">
+    <div class="header">
+        <div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+<br/>
+
+    <div>
+   		<div style="width:100%;height:100%;background:url('img/help.PNG')no-repeat;" id="zoomable"></div>
+   		<br><br>
+	</div>
+	
+	<a class="btn btn-primary" id="zoom" data-zoom="zoom-in" href="javascript:void(0)" style="padding:4px 18px; z-index:99999; position:fixed;bottom:0px; right:0px; background:#1fae66;color:#FFF;font-family:'Open Sans';text-decoration:none;">ZOOM</a>
+	
+	<a href="menu.html" class="btn btn-primary" style="position:fixed;bottom:0px; left:0px; padding:4px 18px;background:#1fae66;color:#FFF;font-family:'Open Sans';text-decoration:none;">BACK</a>
+    
+    <script>
+    $(document).ready(function(){
+    	$('#zoomable').backgroundDraggable();
+    	$('#zoom').click(function(){
+    		
+    	});
+    	$('#zoom').click(function(){
+    		console.log('zoom');
+    		if($(this).attr('data-zoom') == 'zoom-in'){
+    			$('#zoom').text('ZOOM-OUT');
+    			$('#zoomable').css('background-size','100% 100%');
+    			$(this).attr('data-zoom', 'zoom-out');
+    		}else{
+    			$('#zoom').text('ZOOM-IN');
+    			$('#zoomable').css('background-size','150% 150%');
+    			$(this).attr('data-zoom', 'zoom-in');
+    		}
+    		
+    	});
+
+        $('.menus').height($(window).height()-91);
+        
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-91);
+        });
+    });    
+    </script>
+</body>
+</html>

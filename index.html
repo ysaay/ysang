@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>SDMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        .spinner {
+          z-index: 2;
+          content: "";
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          bottom: 40px;
+          left: 50%;
+          margin: 0px 0 0 -10px;
+          
+          border-right: 2px solid #333333;
+          border-left: 2px solid #333333;
+          border-top: 0px solid #f1c40f;
+          border-bottom: 0px solid #f1c40f;
+          
+          -webkit-transition: all .75s ease 0s;
+          transition: all .75s ease 0s;
+          border-radius: 100%;
+
+          -webkit-animation: standard .75s infinite linear;
+          animation: standard .75s infinite linear;
+          -webkit-transform-origin: center;
+          -ms-transform-origin: center;
+          transform-origin: center;
+        }
+        
+        @-webkit-keyframes standard {
+          from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes standard {
+          from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+    
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        
+        .logo {
+            background: url(img/logo.jpg);
+            background-size: 100% 100%;
+            width:120px;
+            height:120px;
+            border-radius: 60px;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            margin-top: -60px;
+            margin-left: -60px;
+        }
+        
+        .loading {
+            position: fixed;
+            text-align:center;
+            font-family: 'Open Sans';
+            font-size:12px;
+            bottom: 8px;
+            width: 100%;
+            color: #333;
+        }
+        .app-title {
+            text-align:center;
+            font-family: 'Open Sans';
+            font-size: 18px;
+            font-weight: 100;
+            position: fixed;
+            width: 100%;
+            top: 30%;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="animated fadeIn">
+   
+    <div class="logo"></div>
+    <div class="app-title">INTERACTIVE SCHOLARS<br>ONLINE PORTAL</div>
+    <span class="spinner"></span>
+    <div class="loading">LOADING ...</div>
+    <script>
+        setTimeout(function(){
+         window.location = 'menu.html';
+        }, 3000);
+    </script>
+</body>
+</html>

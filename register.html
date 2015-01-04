@@ -1,0 +1,265 @@
+<html>
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            text-align: center;
+        }
+        .app-title {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+            position:fixed;
+            bottom:0px;
+            width:100%;
+            text-align: center;
+            background: #333;
+            height:31px;
+        }
+
+		div.list {
+			margin-top: 65px;
+		}
+		
+		div.form-container {
+			margin: 10px 10px;
+			padding: 5px 10px;
+			background: rgba(0,0,0,0.3);
+			font-family: 'Open Sans';
+			color: #E8E8E8;
+		}
+        .back {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        
+         .forward {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+        
+        .menu {
+            position: fixed;
+            z-index: 1;
+            bottom: 5px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+    </style>
+</head>
+<body class="animated fadeIn">
+    <div class="header">
+        <div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <span style="padding-top:10px;display:inline-block;font-size:25px;">
+            	Registration Form
+			</span>
+            <img src="img/gordon.jpg" height="50" style="border-radius:50%;position:fixed;left:10px;top:5px">
+            <img src="img/icon.png" height="50" style="position:fixed;top:5px;right:10px">
+        </div>
+    </div>
+    <form id="student-form">
+    <div class="list">
+    	<div class="form-container hide" id="form-error-container">
+	    	<div class="form-group">
+				<label id="form-error"></label>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>STUDENT #</label>
+				<input name="data[User][username]" class="form-control" required>
+			</div>	
+    	</div>
+		
+		<div class="form-container">
+	    	<div class="form-group">
+				<label>NAME</label>
+				<input type="hidden" name="data[User][id]" id="scholar-id">
+				<input name="data[User][name]" class="form-control" required id="scholarname">
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>COURSE</label>
+				<select name="data[Student][course]" class="form-control" required id="scholar-course">
+					<option value="">SELECT COURSE</option>
+					<option>ACT</option>
+					<option>BSIT</option>
+					<option>BSCS</option>
+					<option>BSA</option>
+					<option>BSBA - FM</option>
+					<option>BSBA - MKT</option>
+					<option>BSBA - HRDM</option>
+					<option>BSN</option>
+					<option>BSCA</option>
+					<option>BSHRM</option>
+					<option>BSTM</option>
+					<option>GM</option>
+					<option>GEN</option>
+					<option>ABCOM</option>
+					<option>BEEd</option>
+					<option>BEEd - Gen</option>
+					<option>BSEd</option>
+					<option>BSEd - E</option>
+					<option>BSEd - M</option>
+					<option>BSEd - BIO</option>
+					<option>BSEd - SOC</option>
+					<option>BSEd - MAPEH</option>
+					<option>ProfEd</option>
+					
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>YEAR LEVEL</label>
+				<select name="data[Student][year_level]" class="form-control" required>
+					<option value="">SELECT YEAR</option>
+					<option>1st YEAR</option>
+					<option>2nd YEAR</option>
+					<option>3rd YEAR</option>
+					<option>4th YEAR</option>
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>SCHOLAR TYPE</label>
+				<select name="data[Student][scholar_type]" class="form-control" required id="scholar-yearlevel">
+					<option value="">SELECT TYPE</option>
+					<option>STUDENT GRANTEE</option>
+					<option>ACADEMIC CITY SCHOLAR</option>
+					<option>MARCHING BAND</option>
+					<option>VARSITY GRANT</option>
+					<option>PASE 100</option>
+					<option>PASE 101</option>
+					<option>ALAY LAKAD</option>
+					<option>BARANGAY OFFICIAL EDUCATIONAL PRIVILEGE</option>
+					<option>PNP PRIVILEGE</option>
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>SAO MEMBER</label>
+				<select name="data[User][member]" class="form-control" required>
+					<option value=""></option>
+					<option>MEMBER</option>
+					<option>NOT MEMBER</option>
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>PASSWORD</label>
+				<input name="data[User][password]" class="form-control password" type="password" required>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>RETYPE PASSWORD</label>
+				<input name="data[Retype][password]" class="form-control retype-password" type="password" required>
+			</div>	
+    	</div>
+    	
+    	
+    	<div class="form-container">
+	    	<button class="btn btn-primary btn-block">REGISTER</button>
+    	</div>
+    	<br><br>
+    </div>
+    <input type="reset" id="reset" class="hide">
+	</form>
+	
+	<!-- <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+	<a class="forward" href="menu.html"><i class="fa fa-arrow-left"></i></a>
+    <div class="app-title"></div> -->
+    <a class="btn btn-primary" href="menu.html" style="padding:4px 18px; z-index:99999; position:fixed;bottom:0px; background:#1fae66;color:#FFF;font-family:'Open Sans';text-decoration:none;left:0px;">BACK</a>
+    <script src="plugins/bootstrap-3.2/js/bootstrap.min.js"></script>
+    <script>
+    function error($message){
+    	$('#form-error').html($message);
+    	$('#form-error-container').removeClass('hide');
+    }
+    $(document).ready(function(){
+    	
+        $('.menus').height($(window).height()-91);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-91);
+        });
+        
+	    $("#student-form").bind("submit", function (event){
+	    	if($('.password').val() != $('.retype-password').val()){
+	    		error('Password does not match.');
+	    	}else{
+		        $.ajax({
+		            type:"POST", url: api + 'register',
+		            data: $('#student-form').serialize(), dataType: "json",
+		            success:function (data) {
+		            	if(data.response == 'success') {
+		            		$('#reset').click();
+		            		error('Registration was successful.');
+		            		window.location = 'login.html';
+		            	} else {
+		            		alert(data.message);
+		            	}
+						console.log(data);
+		           },
+		        });
+	    	}
+
+	        return false;
+	    });
+	    
+	    $('#scholarname').keyup(function(){
+	    	console.log('e');
+	    	$name =  $('#scholarname').val();
+	    	$.ajax({
+	    		dataType: 'json',
+	    		url: 'http://red.boxhost.me/api/regAutoFill?name=' + $name,
+	    		success: function(e){
+	    			console.log(e);
+	    			if(e.response){
+	    				$('#scholar-course').val(e.student.Student.course);
+	    				$('#scholar-yearlevel').val(e.student.Student.year_level.toUpperCase());
+	    				$('#scholar-id').val(e.student.User.id);
+	    				console.log(e.student.Student.year_level.toUpperCase());
+	    			}
+	    			
+	    		}
+	    	});
+	    });
+    });    
+    </script>
+</body>
+</html>

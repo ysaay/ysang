@@ -1,0 +1,127 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+		.btn{
+			
+		}
+    </style>
+</head>
+<body class="animated fadeIn">
+    <div class="header">
+        <div style="height:60px;background:#1fae66;text-align:center;color:#FFF;font-family:'Impact';font-weight:100;">
+            <img src="img/banner1.PNG" height="110%" width="100%"/>        
+			</div>
+    </div>
+    <br/>
+    <br/>
+      <br/>
+    <br/>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+			 <h2><center><font size="5%">GUIDELINES FOR SCHOLAR'S DUTY<br/>
+			(For Student Grantees)</font></center></h2>
+			<p  style="align: justify "><font size="4%">
+				1.	A Student Grantee shall render 80 hours of service in a regular semester. The specified duty hours shall be completed on the specified date by the Scholar Affairs Office.
+<br/>
+
+				2.	A scholar should be in proper uniform / attire and should observe good manners and right conduct while rendering volunteer works.
+<br/>
+
+				3.	A SCHOLAR SHOULD BE RESPONSIBLE TO ADHERE TO THE ASSIGNED SCHEDULES OF SCHOLAR'S DUTY HOURS.
+<br/>
+
+				4.	A scholar will be provided a daily time record (DTR) for the monitoring of attendance in the workplace signed by the immediate superior.
+<br/>
+
+				5.	Incomplete information in the DTR (e.g. no signature of the immediate superior) means that the volunteer hours rendered is null and void.
+<br/>
+
+				6.	If the DTR is lost, a certification from the office / department where service was rendered must be issued to confirm the rendered duty hours.
+<br/>
+
+				7.	In case of absences, the immediate supervisor must be informed a day before the scheduled duty and that a written excuse letter or medical certificate must be submitted to the Scholar's Affairs Office.
+<br/>
+
+				8.	THREE (3) CONSECUTIVE ABSENCES WITHOUT VALID REASON SHALL BE GROUND FOR THE TERMINATION OF THE SCHOLARSHIP.
+<br/>
+
+				9.	ANY VOLUNTEER WORKS WITHOUT THE APPROVAL OR AUTHORIZATION OF THE STUDENT WELFARE AND SERVICES and/or SCHOLAR'S AFFAIRS OFFICE SHALL BE CONSIDRED NULL AND VOID.
+<br/>
+
+				10.	If a scholar wants and/or needs to extend his/her volunteer hours, his/her immediate superior has the right to approve the said extension provided that it will not affect the volunteer hours of other scholars or it is urgently needed.  Then, the scholar must inform the Scholar's Affairs Office regarding his/her extension for documentation.
+<br/>
+
+				11.	Misuse, tampering with and/or falsification of DTR or any school forms shall be subject  to disciplinary action (Refer to GC Student Manual)
+<br/>
+
+				12.	No scholars are allowed to render volunteer service if classes are suspended by a legitimate authority due to storm signals and other force majeure occurrence.
+</font>
+			</p>
+		</div>
+		
+		<div class="">
+			<a href="menu.html">
+				<button class="btn col-lg-12 col-md-12 col-sm-12 col-xs-12 btn-success"><i class="fa fa-bars"></i>  Menu</button>
+			</a>
+		</div>
+		
+    </div>
+
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <a class="back" href="scholars-grantee.html"><i class="fa fa-arrow-left"></i></a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+    });    
+    </script>
+</body>
+</html>
